@@ -79,8 +79,9 @@ public class LinkedListDeque<T> implements Deque<T> {
 
     @Override
     public T get(int index) {
-        if (index > size)
+        if (index > size) {
             return null;
+        }
 
         Node ptr = sentinelF.next;
         for (int i = index; i > 0; i--) {
@@ -91,8 +92,9 @@ public class LinkedListDeque<T> implements Deque<T> {
 
 
     public T getRecursive(int index) {
-        if (index == 0)
+        if (index == 0) {
             return null;
+        }
         return getRecursiveHelp(sentinelF.next, index);
     }
 
